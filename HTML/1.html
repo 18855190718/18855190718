@@ -1,5 +1,4 @@
 <html class="mr-cont">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <audio src="../音乐/周冬雨 许魏洲 关晓彤 马天宇 鞠婧祎 魏大勋 - 我和我的祖国 青春版.mp3" autoplay="autoplay" loop="loop"></audio>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
@@ -38,10 +37,10 @@
         h1 {
             /* 谷歌字体 */
             font-family: "Sofia";
-            font-size: 22px;
+            font-size: 1.375rem;
             background-image: url(../照片/国庆2.jpeg);
-            width: 384px;
-            height: 216px;
+            width: 24rem;
+            height: 13.5rem;
             background-size: 100% 100%;
             position: relative;
             animation-name: example;
@@ -58,36 +57,36 @@
             0% {
                 background-image: url(../照片/国庆1.jpeg);
                 background-size: 100% 100%;
-                left: 0px;
-                top: 0px;
+                left: 0rem;
+                top: 0rem;
                 color: aqua;
             }
             25% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 360px;
-                top: 0px;
+                left: 22.5rem;
+                top: 0rem;
                 color: rgb(0, 252, 147);
             }
             50% {
                 background-image: url(../照片/国庆4.png);
                 background-size: 100% 100%;
-                left: 200px;
-                top: 65px;
+                left: 12.5rem;
+                top: 4.25rem;
                 color: rgb(0, 255, 64);
             }
             75% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 360px;
-                top: 65px;
+                left: 22.5rem;
+                top: 4rem;
                 color: rgb(157, 255, 0);
             }
             100% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 0px;
-                top: 0px;
+                left: 0rem;
+                top: 0rem;
                 color: rgb(255, 255, 255);
             }
         }
@@ -100,8 +99,8 @@
         .dropbtn {
             background-color: #4CAF50;
             color: white;
-            padding: 16px;
-            font-size: 16px;
+            padding: 1rem;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
         }
@@ -115,14 +114,14 @@
             display: none;
             position: absolute;
             background-color: #00f80c4f;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgb(0, 255, 234);
+            min-width: 10rem;
+            box-shadow: 0rem 0.5rem 1rem 0rem rgb(0, 255, 234);
             z-index: 1;
         }
         
         .dropdown-content a {
             color: rgba(119, 0, 255, 0.87);
-            padding: 12px 16px;
+            padding: 0.12rem 0.16rem;
             text-decoration: none;
             display: block;
         }
@@ -138,9 +137,38 @@
         .dropdown:hover .dropbtn {
             background-color: #3e8e41;
         }
+        /* 分辨率判断 */
+        
+        @media only screen and (min-width: 1024px) {
+            .content {
+                width: 1000px;
+                margin: auto
+            }
+        }
+        
+        @media only screen and (min-width: 400px) and (max-width: 1024px) {
+            .rightBox {
+                width: 0;
+            }
+            .leftBox {
+                width: 30%
+            }
+            .middleBox {
+                width: 65%
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .leftBox,
+            .rightBox,
+            .middleBox {
+                width: 98%;
+                height: 200px;
+            }
+        }
     </style>
     <title>
-        无名之逆的网站
+        <h1>无名之逆的网站</h1>
     </title>
 </head>
 <script>
@@ -150,6 +178,7 @@
     });
     addLoadEvent();
 </script>
+
 <body>
     <meta charset="UTF-8">
     <h2 align="center" style="color: chartreuse;font-size:60px;;" id="0">无名之逆的网站</h2>
@@ -157,7 +186,7 @@
     <div class="center">
         <div class="dropdown">
             <!-- 按钮 -->
-            <button class="dropbtn">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp导&nbsp&nbsp航&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+            <button class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;导&nbsp;&nbsp;航&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
             <div class="dropdown-content">
                 <a href="2.html">博客</a>
                 <a href="https://www.baidu.com/">百度</a>
