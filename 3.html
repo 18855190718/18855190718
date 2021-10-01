@@ -1,0 +1,206 @@
+<html>
+<link rel="stylesheet" type="text/css" href="../highlight/styles/base16/atelier-plateau-light.min.css">
+<audio src="音乐/The truth that you leave.mp3 - 溯（治愈女声版）.mp3" autoplay="autoplay" loop="loop"></audio>
+<style>
+    body {
+        margin: 0;
+        background-image: url(照片/质感4K（1）.png);
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+    }
+    /* 导航栏 */
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* 宽度设置 */
+        width: 15%;
+        /* 透明颜色 */
+        background: none;
+        position: fixed;
+        height: auto;
+        overflow: auto;
+    }
+    
+    li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    li a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+    /* 按钮 */
+    
+    .button {
+        text-align: center;
+        background-color: unset;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        /* 字体大小 */
+        font-size: 25px;
+        /* 字体颜色 */
+        color: aqua;
+        /* 圆角按钮 */
+        border-radius: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+    
+    .button:hover {
+        box-shadow: 0 25px 16px 0 rgba(255, 255, 255, 0.24), 0 25px 50px 0 rgb(0, 0, 0);
+    }
+    
+    .button:after {
+        content: "";
+        background: #f1f1f1;
+        display: block;
+        position: absolute;
+        padding-top: 100%;
+        padding-left: 100%;
+        margin-left: 0px !important;
+        margin-top: 0%;
+        opacity: 0;
+        transition: all 0.3s
+    }
+    
+    .button:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="1.css" rel="stylesheet" type="text/css">
+    <div class="charset_title" id="1">
+        无名之逆的博客
+    </div>
+
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#1">开始</a></li>
+        <li><a href="#2">第一面</a></li>
+        <li><a href="#3">第二面</a></li>
+        <li><a href="#4">第三面</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;" id="2">
+        <a href="https://blog.csdn.net/m0_52796585?spm=1000.2115.3001.5343" class="link_c_l_blue">CSDN博客链接</a>
+    </div>
+    <a href="#0">
+        <button class="button">↓</button>
+    </a>
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="2">
+        <!-- 还要注意，我们已为 sidenav 设置 overflow：auto。如果 sidenav 太长时（例如，如果其中有超过 50 个链接），会添加滚动条。 -->
+        <!-- 请注意，此 div 元素的左外边距为 25％。这是因为侧导航栏被设置为 25％ 宽。如果删除这个外边距，则 sidenav 将叠加到该 div 上。 -->
+        <!-- 全高的固定侧导航栏 -->
+        <!-- 请尝试滚动此区域，并查看 sidenav 如何粘在页面上。 -->
+
+        <h1 style="color: cyan;"> Machine Schedule</h1>
+        <h2 style="color: darkseagreen;">Time Limit: 2000/1000 MS (Java/Others) Memory Limit: 65536/32768 K (Java/Others)<br> Total Submission(s): 12936 Accepted Submission(s): 6437<br></h2>
+
+        <p style="height: 3000px">
+            <code class="syntaxhighlighter">
+                Problem Description<br> As we all know, machine scheduling is a very classical problem in computer science and has been studied for a very long history. Scheduling problems differ widely in the nature of the constraints that must be satisfied
+            and the type of schedule desired. Here we consider a 2-machine scheduling problem.<br>
+            <br> There are two machines A and B. Machine A has n kinds of working modes, which is called mode_0, mode_1, …, mode_n-1, likewise machine B has m kinds of working modes, mode_0, mode_1, … , mode_m-1. At the beginning they are both work at
+            mode_0.
+            <br>
+            <br> For k jobs given, each of them can be processed in either one of the two machines in particular mode. For example, job 0 can either be processed in machine A at mode_3 or in machine B at mode_4, job 1 can either be processed in machine
+            A
+            <br> Input
+            <br> The input file for this program consists of several configurations. The first line of one configuration contains three positive integers: n, m (n, m
+            < 100) and k (k < 1000). The following k lines give the constrains of the k jobs, each line is a triple: i, x, y.<br>
+                <br> The input will be terminated by a line containing a single zero.<br>
+                <br> Output
+                <br> The output should be one integer per line, which means the minimal times of restarting machine.<br>
+                <br> Sample Input<br> 5 5 10 0 1 1 1 1 2 2 1 3 3 1 4 4 2 1 5 2 2 6 2 3 7 2 4 8 3 3 9 4 3 0<br>
+                <br> Sample Output<br> 3
+                <br>
+                <br> Source
+                <br> Asia 2002, Beijing (Mainland China)<br>
+                <br> Recommend
+                <br> Ignatius.L
+                <br>
+                <br> 题目大意：
+                <br>
+                <br> 两个机器，有多种模式，每个机器都可以重启切换模式，机器默认模式是模式0，现有多种任务，每个任务对应一种模式，问两个机器最少需要重启多少次才可以完成这些任务。
+                <br>
+                <br> 解题思路：
+                <br>
+                <br> 匈牙利算法，此题可以转化成二分图的最大匹配。
+                <br>
+                <br> AC代码：
+                <br>
+                <br> #include
+                <iostream><br> #include
+                    <vector><br> #include
+                        <cstring><br> #define MAX 101<br> using namespace std;<br> vector
+                            <int> unvisit(MAX, 1); //存放是否访问过<br> vector
+                                <int> bo_f(MAX, -1); //女生的男朋友<br> bool dfs(vector
+                                    <vector<int>> &machine, int b_w, int n, int m){<br> for (int i = 0; i
+                                        < m; ++i){<br>
+                                            if (machine[b_w][i] && unvisit[i]){ //传过来的男生有女朋友且该女生没有访问过<br> unvisit[i] = 0;<br> if (bo_f[i] == -1 || dfs(machine, bo_f[i], n, m)){ //该女生没有男朋友且dfs后为真<br> bo_f[i] = b_w;<br> return true;<br> }
+                                            <br> }
+                                            <br> }
+                                            <br> return false;<br> }
+                                            <br> int xyl(vector
+                                            <vector<int>> &machine, int n, int m){<br> int s = 0;<br> for (int i = 0; i
+                                                < n; ++i){<br>
+                                                    fill(unvisit.begin(), unvisit.end(), 1);<br> if (dfs(machine, i, n, m)) ++s;<br> }
+                                                    <br> return s;<br> }
+                                                    <br> int main()<br> {
+                                                    <br> ios::sync_with_stdio(false);
+                                                    <br> cin.tie(0);
+                                                    <br> int n, m, k;<br> int i, x, y;<br> while (cin >> n && n){<br> cin >> m >> k;<br> vector
+                                                    <vector<int>> machine(MAX, vector
+                                                        <int>(MAX, 0)); //邻接矩阵<br> fill(unvisit.begin(), unvisit.end(), 1);<br> fill(bo_f.begin(), bo_f.end(), -1);<br> while (k--){<br> cin >> i >> x >> y;<br> if (x != 0 && y != 0)<br> machine[x][y] = 1;<br>                                                            }
+                                                            <br> cout
+                                                            << xyl(machine, n, m) << endl;<br>
+                                                                }<br> return 0;<br> }
+                                                                <br>
+            </code>
+
+        </p>
+    </div>
+    <p id="0">dsf</p>
+
+
+
+
+</body>
+
+</html>
