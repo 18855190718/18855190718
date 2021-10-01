@@ -1,4 +1,5 @@
 <html class="mr-cont">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <audio src="../音乐/周冬雨 许魏洲 关晓彤 马天宇 鞠婧祎 魏大勋 - 我和我的祖国 青春版.mp3" autoplay="autoplay" loop="loop"></audio>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
@@ -142,7 +143,13 @@
         无名之逆的网站
     </title>
 </head>
-
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 <body>
     <meta charset="UTF-8">
     <h2 align="center" style="color: chartreuse;font-size:60px;;" id="0">无名之逆的网站</h2>
