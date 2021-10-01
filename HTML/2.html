@@ -35,14 +35,37 @@
         }
     }
     
-    .left {
-        width: 100%;
+    .leftBox,
+    .rightBox {
         float: left;
+        width: 20%;
+        height: 500px;
+        margin: 5px;
+        background: #ffccf7;
+        display: inline;
+        -webkit-transition: width 1s ease;
+        -moz-transition: width 1s ease;
+        -o-transition: width 1s ease;
+        -ms-transition: width 2s ease;
+        transition: width 1s ease;
     }
     
-    .right {
-        width: 100%;
-        float: right;
+    .middleBox {
+        float: left;
+        width: 50%;
+        height: 800px;
+        margin: 5px;
+        background: #b1fffc;
+        display: inline;
+        -webkit-transition: width 1s ease;
+        -moz-transition: width 1s ease;
+        -o-transition: width 1s ease;
+        -ms-transition: width 1s ease;
+        transition: width 1s ease;
+    }
+    
+    .rightBox {
+        background: #fffab1;
     }
     
     ul {
@@ -84,14 +107,6 @@
         border-radius: 0.25rem;
     }
 </style>
-<!-- 图片自适应 -->
-<script>
-    addLoadEvent(function() {
-        var imgs = document.getElementById("content").getElementsByTagName("img");
-        imgSizer.collate(imgs);
-    });
-    addLoadEvent();
-</script>
 
 <head>
     <meta charset="UTF-8">
@@ -139,7 +154,7 @@
         text-align: center;
         background-image: url(../照片/轩辕4K.png);
         background-size: 100% auto;
-        background-repeat: no-repeat;
+        background-repeat: repeat-y;
     }
     /* 表格 */
     

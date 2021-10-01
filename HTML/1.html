@@ -11,7 +11,7 @@
             font-family: 'Brush Script MT', cursive;
             background-image: url(../照片/国庆4.png);
             background-size: 100% auto;
-            background-repeat: repeat-y;
+            background-repeat: no-repeat;
         }
         /* 链接 */
         /* 访问过的链接*/
@@ -41,6 +41,7 @@
             background-image: url(../照片/国庆2.jpeg);
             width: 24rem;
             height: 13.5rem;
+            border-radius: 0.3rem;
             background-size: 100% 100%;
             position: relative;
             animation-name: example;
@@ -102,6 +103,7 @@
             padding: 1rem;
             font-size: 1rem;
             border: none;
+            border-radius: 0.5rem;
             cursor: pointer;
         }
         
@@ -109,6 +111,7 @@
             position: relative;
             display: inline-block;
         }
+        /* 导航展开 */
         
         .dropdown-content {
             display: none;
@@ -117,13 +120,16 @@
             min-width: 10rem;
             box-shadow: 0rem 0.5rem 1rem 0rem rgb(0, 255, 234);
             z-index: 1;
+            border-radius: 0.5rem;
         }
+        /* 鼠标放到展开的上面 */
         
         .dropdown-content a {
             color: rgba(119, 0, 255, 0.87);
-            padding: 0.12rem 0.16rem;
+            padding: 0.12rem 4rem;
             text-decoration: none;
             display: block;
+            border-radius: 00.5rem;
         }
         
         .dropdown-content a:hover {
@@ -136,6 +142,40 @@
         
         .dropdown:hover .dropbtn {
             background-color: #3e8e41;
+        }
+        /* 调整页面 */
+        
+        .leftBox,
+        .rightBox {
+            float: left;
+            width: 20%;
+            height: 500px;
+            margin: 5px;
+            background: #ffccf7;
+            display: inline;
+            -webkit-transition: width 1s ease;
+            -moz-transition: width 1s ease;
+            -o-transition: width 1s ease;
+            -ms-transition: width 2s ease;
+            transition: width 1s ease;
+        }
+        
+        .middleBox {
+            float: left;
+            width: 50%;
+            height: 800px;
+            margin: 5px;
+            background: #b1fffc;
+            display: inline;
+            -webkit-transition: width 1s ease;
+            -moz-transition: width 1s ease;
+            -o-transition: width 1s ease;
+            -ms-transition: width 1s ease;
+            transition: width 1s ease;
+        }
+        
+        .rightBox {
+            background: #fffab1;
         }
         /* 分辨率判断 */
         
@@ -171,17 +211,10 @@
         <h1>无名之逆的网站</h1>
     </title>
 </head>
-<script>
-    addLoadEvent(function() {
-        var imgs = document.getElementById("content").getElementsByTagName("img");
-        imgSizer.collate(imgs);
-    });
-    addLoadEvent();
-</script>
 
 <body>
     <meta charset="UTF-8">
-    <h2 align="center" style="color: chartreuse;font-size:60px;;" id="0">无名之逆的网站</h2>
+    <h2 align="center" style="color: chartreuse;font-size:3.75rem;" id="0">无名之逆的网站</h2>
 
     <div class="center">
         <div class="dropdown">

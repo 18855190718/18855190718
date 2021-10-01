@@ -84,6 +84,40 @@
         opacity: 1;
         transition: 0s
     }
+    /* 调整页面 */
+    
+    .leftBox,
+    .rightBox {
+        float: left;
+        width: 20%;
+        height: 500px;
+        margin: 5px;
+        background: #ffccf7;
+        display: inline;
+        -webkit-transition: width 1s ease;
+        -moz-transition: width 1s ease;
+        -o-transition: width 1s ease;
+        -ms-transition: width 2s ease;
+        transition: width 1s ease;
+    }
+    
+    .middleBox {
+        float: left;
+        width: 50%;
+        height: 800px;
+        margin: 5px;
+        background: #b1fffc;
+        display: inline;
+        -webkit-transition: width 1s ease;
+        -moz-transition: width 1s ease;
+        -o-transition: width 1s ease;
+        -ms-transition: width 1s ease;
+        transition: width 1s ease;
+    }
+    
+    .rightBox {
+        background: #fffab1;
+    }
     /* 分辨率判断 */
     
     @media only screen and (min-width: 1024px) {
