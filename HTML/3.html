@@ -1,4 +1,6 @@
 <html>
+<!-- 宽度适应手机 -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="../highlight/styles/base16/atelier-plateau-light.min.css">
 <audio src="../音乐/The truth that you leave.mp3 - 溯（治愈女声版）.mp3" autoplay="autoplay" loop="loop"></audio>
 <style>
@@ -26,7 +28,7 @@
     li a {
         display: block;
         color: #000;
-        padding: 8px 16px;
+        padding: 0.5rem 1rem;
         text-decoration: none;
     }
     
@@ -48,11 +50,11 @@
         display: inline-block;
         width: 100%;
         /* 字体大小 */
-        font-size: 25px;
+        font-size: 1.56rem;
         /* 字体颜色 */
         color: aqua;
         /* 圆角按钮 */
-        border-radius: 12px;
+        border-radius: 0.75rem;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         /* Safari */
@@ -60,7 +62,7 @@
     }
     
     .button:hover {
-        box-shadow: 0 25px 16px 0 rgba(255, 255, 255, 0.24), 0 25px 50px 0 rgb(0, 0, 0);
+        box-shadow: 0 1.56rem 1rem 0 rgba(255, 255, 255, 0.24), 0 1.56rem 3.125rem 0 rgb(0, 0, 0);
     }
     
     .button:after {
@@ -82,7 +84,44 @@
         opacity: 1;
         transition: 0s
     }
+    /* 分辨率判断 */
+    
+    @media only screen and (min-width: 1024px) {
+        .content {
+            width: 1000px;
+            margin: auto
+        }
+    }
+    
+    @media only screen and (min-width: 400px) and (max-width: 1024px) {
+        .rightBox {
+            width: 0;
+        }
+        .leftBox {
+            width: 30%
+        }
+        .middleBox {
+            width: 65%
+        }
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .leftBox,
+        .rightBox,
+        .middleBox {
+            width: 98%;
+            height: 200px;
+        }
+    }
 </style>
+<!-- 图片自适应 -->
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -92,14 +131,7 @@
     </div>
 
 </head>
-<!-- 图片自适应 -->
-<script>
-    addLoadEvent(function() {
-        var imgs = document.getElementById("content").getElementsByTagName("img");
-        imgSizer.collate(imgs);
-    });
-    addLoadEvent();
-</script>
+
 <body>
     <ul>
         <li><a class="active" href="#1">开始</a></li>
