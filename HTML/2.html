@@ -80,6 +80,14 @@
     }
     time();
 </script>
+    <!-- 图片自适应 -->
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 <style>
     body {
         text-align: center;
