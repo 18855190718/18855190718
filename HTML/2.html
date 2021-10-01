@@ -1,6 +1,50 @@
 <html>
+<!-- 宽度适应手机 -->
+<!-- "自适应网页设计"的核心，就是CSS3引入的Media Query模块。自动探测屏幕宽度，然后加载相应的CSS文件 -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <audio src="../音乐/尽快伤害.mp3" autoplay="autoplay" loop="loop"></audio>
 <style>
+    /* 分辨率判断 */
+    
+    @media only screen and (min-width: 1024px) {
+        .content {
+            width: 1000px;
+            margin: auto
+        }
+    }
+    
+    @media only screen and (min-width: 400px) and (max-width: 1024px) {
+        .rightBox {
+            width: 0;
+        }
+        .leftBox {
+            width: 30%
+        }
+        .middleBox {
+            width: 65%
+        }
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .leftBox,
+        .rightBox,
+        .middleBox {
+            width: 98%;
+            height: 200px;
+        }
+    }
+    
+    .left {
+        width: 100%;
+        float: left;
+    }
+    
+    .right {
+        width: 100%;
+        float: right;
+    }
+    
     ul {
         list-style-type: none;
         margin: 0;
@@ -34,10 +78,18 @@
     }
     
     table {
-        border: 2px solid rgb(0, 207, 243);
-        border-radius: 5px;
+        border: 0.15rem solid rgb(0, 207, 243);
+        border-radius: 0.04rem;
     }
 </style>
+<!-- 图片自适应 -->
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -80,14 +132,6 @@
     }
     time();
 </script>
-    <!-- 图片自适应 -->
-<script>
-    addLoadEvent(function() {
-        var imgs = document.getElementById("content").getElementsByTagName("img");
-        imgSizer.collate(imgs);
-    });
-    addLoadEvent();
-</script>
 <style>
     body {
         text-align: center;
@@ -103,6 +147,7 @@
     /* 邮箱 */
     
     ul {
+        text-align: center;
         list-style-type: none;
     }
     
@@ -111,20 +156,16 @@
         padding: 3px;
         display: block;
     }
-    
-    @media screen and (max-width: 699px) and (min-width: 520px) {
-        ul li a {
-            padding-left: 30px;
-            background: url(QQ.png) left center no-repeat;
-        }
-    }
 </style>
 
 <body>
     <meta charset="UTF-8">
     <ul>
         <li>
-            <li><a data-email="johndoe@example.com" href="mileto:1491579574@qq.com">点击使用QQ邮箱联系我</a></li>
+            <li>
+                <a data-email="johndoe@example.com" href="mileto:1491579574@qq.com">
+                </a>
+            </li>
         </li>
         &nbsp;&nbsp;
         <li>
@@ -163,6 +204,7 @@
                     </th>
                 </tr>
             </table>
+            <br>
             <table>
                 <tr bgcolor="#A5FEDE" align="center">
                     <th>
