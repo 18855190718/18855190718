@@ -92,7 +92,14 @@
     </div>
 
 </head>
-
+<!-- 图片自适应 -->
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 <body>
     <ul>
         <li><a class="active" href="#1">开始</a></li>
