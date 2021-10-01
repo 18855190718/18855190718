@@ -19,7 +19,14 @@
         }
     </style>
 </head>
-
+<!-- 图片自适应 -->
+<script>
+    addLoadEvent(function() {
+        var imgs = document.getElementById("content").getElementsByTagName("img");
+        imgSizer.collate(imgs);
+    });
+    addLoadEvent();
+</script>
 <body>
     <div id="grad1" style="text-align:center;">0deg</div><br>
 
