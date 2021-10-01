@@ -1,0 +1,172 @@
+<html>
+<audio src="../音乐/尽快伤害.mp3" autoplay="autoplay" loop="loop"></audio>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: none;
+        position: -webkit-sticky;
+        /* Safari */
+        position: sticky;
+        top: 0;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: rgb(189, 240, 197);
+    }
+    
+    .active {
+        background-color: #4CAF50;
+    }
+    
+    table {
+        border: 2px solid rgb(0, 207, 243);
+        border-radius: 5px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>无名之逆</title>
+</head>
+
+<link href="../CSS/1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    function time() {
+        var time = new Date();
+        var day = time.getDate();
+        var month = time.getMonth() + 1;
+        var year = time.getFullYear();
+        var mytime = time.toLocaleTimeString(); //获取当前时间
+        var week = time.getDay();
+        switch (week) {
+            case 1:
+                week = "星期一";
+                break;
+            case 2:
+                week = "星期二";
+                break;
+            case 3:
+                week = "星期三";
+                break;
+            case 4:
+                week = "星期四";
+                break;
+            case 5:
+                week = "星期五";
+                break;
+            case 6:
+                week = "星期六";
+                break;
+            case 7:
+                week = "星期日";
+                break;
+        }
+        alert("欢迎进入无名之逆的网站\n" + "当前时间为:" + year + "年" + month + "月" + day + "日 " + mytime + " " + week);
+    }
+    time();
+</script>
+<style>
+    body {
+        text-align: center;
+        background-image: url(../照片/轩辕4K.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    /* 表格 */
+    
+    table {
+        margin: auto;
+    }
+    /* 邮箱 */
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        padding: 3px;
+        display: block;
+    }
+    
+    @media screen and (max-width: 699px) and (min-width: 520px) {
+        ul li a {
+            padding-left: 30px;
+            background: url(QQ.png) left center no-repeat;
+        }
+    }
+</style>
+
+<body>
+    <meta charset="UTF-8">
+    <ul>
+        <li>
+            <li><a data-email="johndoe@example.com" href="mileto:1491579574@qq.com">点击使用QQ邮箱联系我</a></li>
+        </li>
+        &nbsp;&nbsp;
+        <li>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes">
+            点击这里使用QQ联系我
+            </a>
+        </li>
+    </ul>
+
+
+
+    <h1 align="center" class="charset_title">登 录 系 统</h1>
+    <br>
+    <div align="center">
+        <a href="1.html" align="center">
+            <h2>返回</h2>
+        </a>
+    </div>
+    <div>
+        <form action="3.html" method="GET" enctype="" target="_blank">
+            <table border="10px" contenteditable="10%">
+                <tr bgcolor="#A5FEDE" align="center">
+                    <th>账 号</th>
+                    <th bgcolor="#A5FEDE">
+                        <!--requird:必须填写
+                            placeholder:提示信息
+                        -->
+                        <input type="text" name="name" required placeholder="username">
+                    </th>
+
+                </tr>
+                <tr bgcolor="#A5FEDE" align="center">
+                    <th bgcolor="#A5FEDE">密 码</th>
+                    <th>
+                        <input type="text" name="passord" required placeholder="passord">
+                    </th>
+                </tr>
+            </table>
+            <table>
+                <tr bgcolor="#A5FEDE" align="center">
+                    <th>
+                        <input type="submit" value="登录" class="clear">
+                    </th>
+                    <th>
+                        <input type="reset" value="清空" class="clear">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
