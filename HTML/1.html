@@ -1,6 +1,14 @@
 <html class="mr-cont">
 <audio src="../音乐/周冬雨 许魏洲 关晓彤 马天宇 鞠婧祎 魏大勋 - 我和我的祖国 青春版.mp3" autoplay="autoplay" loop="loop"></audio>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<script>
+    /* 获取浏览器高度 */
+    var height = window.outerHeight;
+    /* 获取浏览器高度 */
+    var width = window.outerWidth;
+    alert(height);
+    alert(width);
+</script>
 
 <head>
     <!--默认编码-->
@@ -58,36 +66,37 @@
             0% {
                 background-image: url(../照片/国庆1.jpeg);
                 background-size: 100% 100%;
-                left: 0rem;
-                top: 0rem;
+                /* 使用百分比防止图片移动超过页面 */
+                left: 0%;
+                top: 0%;
                 color: aqua;
             }
             25% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 22.5rem;
-                top: 0rem;
+                left: 22.5%;
+                top: 0%;
                 color: rgb(0, 252, 147);
             }
             50% {
                 background-image: url(../照片/国庆4.png);
                 background-size: 100% 100%;
-                left: 12.5rem;
-                top: 4.25rem;
+                left: 12.5%;
+                top: 4.25%;
                 color: rgb(0, 255, 64);
             }
             75% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 22.5rem;
-                top: 4rem;
+                left: 22.5%;
+                top: 4.25%;
                 color: rgb(157, 255, 0);
             }
             100% {
                 background-image: url(../照片/国庆2.jpeg);
                 background-size: 100% 100%;
-                left: 0rem;
-                top: 0rem;
+                left: 0%;
+                top: 0%;
                 color: rgb(255, 255, 255);
             }
         }
@@ -223,7 +232,7 @@
             <div class="dropdown-content">
                 <a href="2.html">博客</a>
                 <a href="https://www.baidu.com/">百度</a>
-                <a href="4.html">常用网站</a>
+                <a href="4.html">摸鱼</a>
             </div>
         </div>
     </div>
