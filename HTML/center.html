@@ -1,12 +1,11 @@
 <html class="mr-cont">
-<audio src="../音乐/周冬雨 许魏洲 关晓彤 马天宇 鞠婧祎 魏大勋 - 我和我的祖国 青春版.mp3" autoplay="autoplay" loop="loop"></audio>
 <script>
     /* 获取浏览器高度 */
-    var height = window.outerHeight;
-    /* 获取浏览器高度 */
+    var height = window.outerHeight; /* 获取浏览器高度 */
     var width = window.outerWidth;
     alert("当前设备页面高度: " + height + "\n" + "当前设备页面宽度: " + width);
 </script>
+<audio src="../音乐/The truth that you leave.mp3" autoplay="autoplay" loop="loop"></audio>
 
 <head>
     <!--默认编码-->
@@ -151,6 +150,41 @@
                 height: 200px;
             }
         }
+        /*视频背景 */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        video {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: 100%;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index: -11
+        }
+        
+        source {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: 100%;
+        }
+        
+        p {
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+        }
     </style>
     <title>
         无名之逆的网站
@@ -159,55 +193,58 @@
 
 <body>
     <meta charset="UTF-8">
-    <h2 align="center" style="color: chartreuse;font-size:3.75rem;" id="0">无名之逆的网站</h2>
+    <video autoplay loop muted>
+        <source src="E:\焰灵姬.mp4" type="video/mp4" />
+    </video>
+    <h2 align="center" style="color: chartreuse;font-size:3.75rem;margin-top: 6%;" id="0">无名之逆的网站</h2>
 
     <div class="center">
-        <div class="dropdown">
+        <div class="dropdown" style="margin-top: 20%;">
             <!-- 按钮 -->
             <button class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;导&nbsp;&nbsp;航&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
             <div class="dropdown-content">
                 <a href="https://18855190718.github.io/18855190718/HTML/1.html">进入</a>
             </div>
         </div>
-    </div>
-    <h2 align="center" style="color: rgba(10, 255, 141, 0.988);">
-        当前时间：
-        <script>
-            function time() {
-                var time = new Date();
-                var day = time.getDate();
-                var month = time.getMonth() + 1;
-                var year = time.getFullYear();
-                var mytime = time.toLocaleTimeString(); //获取当前时间
-                var week = time.getDay();
-                switch (week) {
-                    case 1:
-                        week = "星期一";
-                        break;
-                    case 2:
-                        week = "星期二";
-                        break;
-                    case 3:
-                        week = "星期三";
-                        break;
-                    case 4:
-                        week = "星期四";
-                        break;
-                    case 5:
-                        week = "星期五";
-                        break;
-                    case 6:
-                        week = "星期六";
-                        break;
-                    case 7:
-                        week = "星期日";
-                        break;
+        <h2 align="center" style="color: rgba(10, 255, 141, 0.988);margin-top: 6%;">
+            当前时间：
+            <script>
+                function time() {
+                    var time = new Date();
+                    var day = time.getDate();
+                    var month = time.getMonth() + 1;
+                    var year = time.getFullYear();
+                    var mytime = time.toLocaleTimeString(); //获取当前时间
+                    var week = time.getDay();
+                    switch (week) {
+                        case 1:
+                            week = "星期一";
+                            break;
+                        case 2:
+                            week = "星期二";
+                            break;
+                        case 3:
+                            week = "星期三";
+                            break;
+                        case 4:
+                            week = "星期四";
+                            break;
+                        case 5:
+                            week = "星期五";
+                            break;
+                        case 6:
+                            week = "星期六";
+                            break;
+                        case 7:
+                            week = "星期日";
+                            break;
+                    }
+                    document.write(year + "年", month + "月", day + "日 ", mytime + " ", week);
                 }
-                document.write(year + "年", month + "月", day + "日 ", mytime + " ", week);
-            }
-            time();
-        </script>
-        | 发布者：无名之逆 | 阅读数：666666</h2>
+                time();
+            </script>
+            | 发布者：无名之逆 | 阅读数：666666</h2>
 </body>
 
 </html>
