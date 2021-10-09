@@ -4,6 +4,58 @@
     background-size: 100% auto;
 }
 
+.video_PC {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置 */
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter:grayscale(100%); //背景灰度设置*/
+    z-index: -1/* 视频出现在文本后 */
+}
+
+.video_Phone {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置 */
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter:grayscale(100%); //背景灰度设置*/
+    z-index: -11
+}
+
+.table {
+    /* 边框厚度 */
+    border: 0.094rem;
+    border: aqua;
+    /* 圆角 */
+    border-radius: 0.25rem;
+    text-shadow: darkgreen;
+    text-align: center;
+    color: darkturquoise;
+    width: auto;
+    height: auto;
+    /* 表格居中 */
+    margin: 0 auto;
+    text-align: center;
+}
+
 .transition {
     width: 100px;
     height: 100px;
