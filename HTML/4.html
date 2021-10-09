@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <meta charset="UTF-8">
 <!-- 宽度适应手机 -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-<audio src="../音乐/人间惊鸿客 (DJ沈念版).mp3 (DJ沈念版).mp3" autoplay="autoplay" loop="loop"></audio>
+<!-- <audio src="../音乐/人间惊鸿客 (DJ沈念版).mp3 (DJ沈念版).mp3" autoplay="autoplay" loop="loop"></audio> -->
 <link rel="stylesheet" type="text/css" href="../CSS/1.css">
 
 
@@ -11,6 +11,38 @@
     <meta charset=" UTF-8 ">
     <title>常用网站</title>
     <style>
+        /* 按钮 */
+        
+        button {
+            background-color: aqua;
+            opacity: 0.4;
+            border-radius: 0.5rem;
+        }
+        
+        button:hover {
+            background-color: lime;
+            opacity: 0.4;
+        }
+        
+        button :active {
+            background-color: rgb(0, 255, 191);
+            opacity: 0.8;
+        }
+        /* 链接 */
+        
+        a:visited {
+            color: deeppink;
+        }
+        /*  鼠标放到链接上*/
+        
+        a:hover {
+            color: green;
+        }
+        /*  点击链接*/
+        
+        s:active {
+            color: rgb(0, 255, 191);
+        }
         /* 调整页面 */
         
         .leftBox,
@@ -74,85 +106,81 @@
                 height: 200px;
             }
         }
+        
+        body {
+            /* 字体 */
+            font-family: 'Brush Script MT', cursive;
+        }
     </style>
+
 </head>
-<!-- 图片自适应 -->
+
 <script>
-    addLoadEvent(function() {
-        var imgs = document.getElementById("content ").getElementsByTagName("img ");
-        imgSizer.collate(imgs);
-    });
-    addLoadEvent();
+    function view() {
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        if (w < 1024) {}
+    };
 </script>
 
 <body>
-    <div id="grad1 " style="text-align:center; ">常用网站导航</div><br>
-    <video autoplay loop muted class="video">
-        <source src="../视频/焰灵姬.mp4 " type="video/mp4 " />
+    <div id="grad1 " style="text-align:center;color: chocolate; ">常用网站导航</div><br>
+    <video autoplay loop muted class="video_Phone">
+        <source src="../视频/老婆.mp4" type="video/mp4 " />
     </video>
-    <pre>
-        <table class="table">
-            <tr>
-                <th>
-                    <a href="https://www.aliyundrive.com/sign/in ">阿里云盘</a>
-                </th>
-                <th>
-                    <a href="http://www.ppsport.com/ ">PP视频</a>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <a href="http://www.chnu.edu.cn ">淮北师范大学官网</a>
-                </th>
-                <th>
-                    <a href="https://www.ixigua.com/ ">西瓜视频</a>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <a href="https://www.bilibili.com/ ">B站</a>
-                </th>
-                <th>
-                    <a href="https://music.163.com/ ">网易云音乐</a>
-                </th>
-            </tr>
-            <tr>
-                <th>
+    <table>
+
+        <tr>
+            <button>
+                <a href=" https://www.aliyundrive.com/sign/in ">阿里云盘</a>
+            </button>
+
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="http://www.ppsport.com/ ">PP体育官网</a>
+            </button>
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="http://www.chnu.edu.cn ">淮北师范大学官网</a>
+            </button>
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="https://www.ixigua.com/ ">西瓜视频</a>
+            </button>
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="https://www.bilibili.com/ "">B站</a>
+             </button>
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="https://music.163.com/ "">网易云音乐</a>
+            </button>
+        </tr>
+        <br>
+        <tr>
+            <button>
                     <a href="https://music.163.com/#/user/home?id=469690124 ">网易云音乐我的喜欢</a>
-                </th>
-                <th>
-                    <a href="https://weibo.com/u/3669102477 ">鞠婧祎微博</a>
-                </th>
-            </tr>
-        </table>
-    </pre>
-    <!-- <a href="#div1 "> div1</a>
-        <a href="#div2 "> div2</a>
-        <a href="#div3 "> div3</a>
-        <a href="#div4 "> div4</a>
-        <a href="#div5 "> div5</a>
+                </button>
 
-        <div id="div1 " style="width: 60px;height: 300px;background-color: #003366 ">
-            1
-        </div>
-
-        <div id="div2 " style="width: 60px;height: 300px;background-color:#556699 ">
-            2
-        </div>
-
-        <div id="div3 " style="width: 60px;height: 300px;background-color: #f5f5f5 ">
-            3
-        </div>
-
-        <div id="div4 " style="width: 60px;height: 300px;background-color: #7d7d7d ">
-            4
-        </div>
-
-        <div id="div5 " style="width: 60px;height: 300px;background-color: #e9f1fa ">
-            5
-        </div> -->
-
-
+        </tr>
+        <br>
+        <tr>
+            <button>
+                <a href="https://weibo.com/u/3669102477 ">鞠婧祎微博</a>
+            </button>
+        </tr>
+        <br>
+    </table>
 </body>
 
 </html>
