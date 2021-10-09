@@ -1,14 +1,17 @@
 <html>
+<meta charset="UTF-8">
 <!-- 宽度适应手机 -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-<link rel="stylesheet" type="text/css" href="../highlight/styles/base16/atelier-plateau-light.min.css">
-<audio src="../音乐/The truth that you leave.mp3" autoplay="autoplay" loop="loop"></audio>
+<link rel="stylesheet" type="text/css" href="../light/prism.css">
+<audio src=" ../音乐/The truth that you leave.mp3 - 溯（治愈女声版）.mp3" autoplay="autoplay " loop="loop ">
+</audio>
 <style>
     body {
-        margin: 0;
+        /* margin: 0;
         background-image: url(../照片/质感4K（1）.png);
         background-size: 100% auto;
-        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+        background-color: bisque; */
     }
     /* 导航栏 */
     
@@ -66,13 +69,13 @@
     }
     
     .button:after {
-        content: "";
+        content: " ";
         background: #f1f1f1;
         display: block;
         position: absolute;
-        padding-top: 100%;
+        padding-top: 5%;
         padding-left: 100%;
-        margin-left: 0px !important;
+        margin-left: 0%;
         margin-top: 0%;
         opacity: 0;
         transition: all 0.3s
@@ -147,130 +150,268 @@
             height: 200px;
         }
     }
+    /*视频背景 */
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    video {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+        /*加滤镜*/
+        /*filter: blur(15px); //背景模糊设置 */
+        /*-webkit-filter: grayscale(100%);*/
+        /*filter:grayscale(100%); //背景灰度设置*/
+        z-index: -11
+    }
+    
+    source {
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+    }
+    
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+    }
 </style>
 <!-- 图片自适应 -->
 <script>
     addLoadEvent(function() {
-        var imgs = document.getElementById("content").getElementsByTagName("img");
+        var imgs = document.getElementById("content ").getElementsByTagName("img ");
         imgSizer.collate(imgs);
     });
     addLoadEvent();
 </script>
 
 <head>
-    <meta charset="UTF-8">
-    <link href="../CSS/1.css" rel="stylesheet" type="text/css">
-    <div class="charset_title" id="1">
+    <meta charset="UTF-8 ">
+    <link href="../CSS/1.css " rel="stylesheet " type="text/css ">
+    <div class="charset_title">
         无名之逆的博客
     </div>
 
 </head>
 
 <body>
+    <video autoplay loop muted>
+        <source src="E:\焰灵姬.mp4" type="video/mp4" />
+    </video>
     <ul>
-        <li><a class="active" href="#1">开始</a></li>
-        <li><a href="#2">第一面</a></li>
-        <li><a href="#3">第二面</a></li>
-        <li><a href="#4">第三面</a></li>
+        <li>
+            <a class="active" href="#0">回到顶部</a>
+        </li>
+        <li><a href="#1 ">实验一</a></li>
+        <li><a href="#2 ">实验二</a></li>
+        <li><a href="#3 ">实验三</a></li>
+        <li><a href="#4 ">实验四</a></li>
+        <li><a href="#5 ">实验五</a></li>
     </ul>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div style="text-align: center;" id="2">
-        <a href="https://blog.csdn.net/m0_52796585?spm=1000.2115.3001.5343" class="link_c_l_blue">CSDN博客链接</a>
-    </div>
-    <a href="#0">
-        <button class="button">↓</button>
-    </a>
 
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="2">
+    <div style="text-align: center;padding-top: 38%">
+        <a href="https://blog.csdn.net/m0_52796585?spm=1000.2115.3001.5343 " class="link_c_l_blue">CSDN博客链接</a>
+    </div>
+    <br>
+    <a href="#2">
+        <button class="button ">开始</button>
+    </a>
+    <div style="margin-left:25%;padding:1px 16px;height:auto;width: auto;" id="1">
         <!-- 还要注意，我们已为 sidenav 设置 overflow：auto。如果 sidenav 太长时（例如，如果其中有超过 50 个链接），会添加滚动条。 -->
         <!-- 请注意，此 div 元素的左外边距为 25％。这是因为侧导航栏被设置为 25％ 宽。如果删除这个外边距，则 sidenav 将叠加到该 div 上。 -->
         <!-- 全高的固定侧导航栏 -->
         <!-- 请尝试滚动此区域，并查看 sidenav 如何粘在页面上。 -->
 
-        <h1 style="color: cyan;"> Machine Schedule</h1>
-        <h2 style="color: darkseagreen;">Time Limit: 2000/1000 MS (Java/Others) Memory Limit: 65536/32768 K (Java/Others)<br> Total Submission(s): 12936 Accepted Submission(s): 6437<br></h2>
+        <h1 style="color: cyan; ">实验一：多项式相加</h1>
+        <pre style="color: rgb(13, 190, 108);font-size: 1.2rem;">
+    一、实验名称：多项式相加 
+    二、实验学时：4学时 
+    三、实验目的 
+        1.理解单链表的结构特性和基本操作算法； 
+        2.掌握利用单链表实现两个多项式相加算法。 
+    四、实验内容(步骤) 
+        1.创建两个一元多项式； 
+        2.输出一元多项式； 3.实现两个一元多项式相加； 
+        4.输出相加后的一元多项式。
+        </pre>
+        <pre>
+<code class="language-css">
+    #include<iostream>
+    using namespace std;
+    struct list{
+        double val;
+        int index;
+        list *next;
+    };
+    void creat(list* head){
+        list *p,*q;
+        p=head;
+        q=nullptr;
+        while(1){
+            int val(0),index(0);
+            cin>>val>>index;
+            if(val==-1) return;
+            q=(list*)malloc(sizeof(list));
+            q->next=nullptr;
+            q->val=val;
+            q->index=index;
+            p->next=q;
+            p=q;
+        }
+    }
+    void print(list *head){
+        if(head==nullptr||head->next==nullptr) return;
+        list *p=head->next;
+        while(p->next!=nullptr){
+            printf("%0.3f*X^%d",p->val,p->index);
+            if(p->val>0) cout<<"+";
+            p=p->next;
+        }
+        printf("%0.3f*X^%d",p->val,p->index);
+    }
+    list* sum(list *head1,list *head2){
+        if(head1->next==nullptr&&head2->next==nullptr) return nullptr;
+        list *p1_n=head1->next,*p2_n=head2->next,*head3=new list,*p3=head3,*q3=head3;
+        p3->next=nullptr;
+        while(p1_n!=nullptr&&p2_n!=nullptr){
+            if(p1_n->index==p2_n->index){
+                if(!(p1_n->val+p2_n->val)){
+                    p1_n=p1_n->next;
+                    p2_n=p2_n->next;
+                }
+                else{
+                    p3=(struct list*)malloc(sizeof(list));
+                    p3->next=nullptr;
+                    p3->val=p1_n->val+p2_n->val;
+                    p3->index=p1_n->index;
+                    q3->next=p3;
+                    q3=p3;
+                    p1_n=p1_n->next;
+                    p2_n=p2_n->next;
+                }
+            }
+            else if(p1_n->index<p2_n->index){
+                if(p1_n->val!=0){
+                    p3=(struct list*)malloc(sizeof(list));
+                    p3->next=nullptr;
+                    p3->val=p1_n->val;
+                    p3->index=p1_n->index;
+                    q3->next=p3;
+                    q3=p3;
+                    p1_n=p1_n->next;
+                }
+                else {
+                    p1_n=p1_n->next;
+                } 
+                
+            }
+            else if(p1_n->index>p2_n->index){
+                if(p2_n->val!=0){
+                        p3=(struct list*)malloc(sizeof(list));
+                        p3->next=nullptr;
+                        p3->val=p2_n->val;
+                        p3->index=p2_n->index;
+                        q3->next=p3;
+                        q3=p3;
+                        p2_n=p2_n->next;
+                }
+                else {
+                    p2_n=p2_n->next;
+                }
+            }
+        }
+        if(p1_n==nullptr&&p2_n!=nullptr){
+            p3->next=p2_n;
+            while(p2_n!=nullptr){
+                if(p2_n->val==0){
+                    p3->next=p2_n->next;
+                    free(p2_n);
+                    p2_n=p3->next;
+                }
+                else {
+                    p3=p3->next;
+                    p2_n=p3->next;
+                }
+            }
+            return head3;
+        }
+        else if(p1_n!=nullptr&&p2_n==nullptr){
+            p3->next=p1_n;
+            while(p1_n!=nullptr){
+                if(p1_n->val==0){
+                    p3->next=p1_n->next;
+                    free(p1_n);
+                    p1_n=p3->next;
+                }
+                else {
+                    p3=p3->next;
+                    p1_n=p3->next;
+                }
+            }
+            return head3;
+        }
+        else return head3;
+    }
+    int main(){
+        while(1){
+            list *head1;
+            head1=(struct list*)malloc(sizeof(list));
+            head1->next=nullptr;
+            cout<<"输入第一个表达式：";
+            creat(head1);
+        
+            list *head2;
+            head2=(struct list*)malloc(sizeof(list));
+            head2->next=nullptr;
+            cout<<"输入第二个表达式：";
+            creat(head2);
+        
+            head1=sum(head1,head2);
+            cout<<"输出合并后的表达式：";
+            print(head1);
+            cout<<endl;
+        }
+        return 0;
+    }
+</code>
 
-        <p style="height: 3000px">
-            <code class="syntaxhighlighter">
-                Problem Description<br> As we all know, machine scheduling is a very classical problem in computer science and has been studied for a very long history. Scheduling problems differ widely in the nature of the constraints that must be satisfied
-            and the type of schedule desired. Here we consider a 2-machine scheduling problem.<br>
-            <br> There are two machines A and B. Machine A has n kinds of working modes, which is called mode_0, mode_1, …, mode_n-1, likewise machine B has m kinds of working modes, mode_0, mode_1, … , mode_m-1. At the beginning they are both work at
-            mode_0.
-            <br>
-            <br> For k jobs given, each of them can be processed in either one of the two machines in particular mode. For example, job 0 can either be processed in machine A at mode_3 or in machine B at mode_4, job 1 can either be processed in machine
-            A
-            <br> Input
-            <br> The input file for this program consists of several configurations. The first line of one configuration contains three positive integers: n, m (n, m
-            < 100) and k (k < 1000). The following k lines give the constrains of the k jobs, each line is a triple: i, x, y.<br>
-                <br> The input will be terminated by a line containing a single zero.<br>
-                <br> Output
-                <br> The output should be one integer per line, which means the minimal times of restarting machine.<br>
-                <br> Sample Input<br> 5 5 10 0 1 1 1 1 2 2 1 3 3 1 4 4 2 1 5 2 2 6 2 3 7 2 4 8 3 3 9 4 3 0<br>
-                <br> Sample Output<br> 3
-                <br>
-                <br> Source
-                <br> Asia 2002, Beijing (Mainland China)<br>
-                <br> Recommend
-                <br> Ignatius.L
-                <br>
-                <br> 题目大意：
-                <br>
-                <br> 两个机器，有多种模式，每个机器都可以重启切换模式，机器默认模式是模式0，现有多种任务，每个任务对应一种模式，问两个机器最少需要重启多少次才可以完成这些任务。
-                <br>
-                <br> 解题思路：
-                <br>
-                <br> 匈牙利算法，此题可以转化成二分图的最大匹配。
-                <br>
-                <br> AC代码：
-                <br>
-                <br> #include
-                <iostream><br> #include
-                    <vector><br> #include
-                        <cstring><br> #define MAX 101<br> using namespace std;<br> vector
-                            <int> unvisit(MAX, 1); //存放是否访问过<br> vector
-                                <int> bo_f(MAX, -1); //女生的男朋友<br> bool dfs(vector
-                                    <vector<int>> &machine, int b_w, int n, int m){<br> for (int i = 0; i
-                                        < m; ++i){<br>
-                                            if (machine[b_w][i] && unvisit[i]){ //传过来的男生有女朋友且该女生没有访问过<br> unvisit[i] = 0;<br> if (bo_f[i] == -1 || dfs(machine, bo_f[i], n, m)){ //该女生没有男朋友且dfs后为真<br> bo_f[i] = b_w;<br> return true;<br> }
-                                            <br> }
-                                            <br> }
-                                            <br> return false;<br> }
-                                            <br> int xyl(vector
-                                            <vector<int>> &machine, int n, int m){<br> int s = 0;<br> for (int i = 0; i
-                                                < n; ++i){<br>
-                                                    fill(unvisit.begin(), unvisit.end(), 1);<br> if (dfs(machine, i, n, m)) ++s;<br> }
-                                                    <br> return s;<br> }
-                                                    <br> int main()<br> {
-                                                    <br> ios::sync_with_stdio(false);
-                                                    <br> cin.tie(0);
-                                                    <br> int n, m, k;<br> int i, x, y;<br> while (cin >> n && n){<br> cin >> m >> k;<br> vector
-                                                    <vector<int>> machine(MAX, vector
-                                                        <int>(MAX, 0)); //邻接矩阵<br> fill(unvisit.begin(), unvisit.end(), 1);<br> fill(bo_f.begin(), bo_f.end(), -1);<br> while (k--){<br> cin >> i >> x >> y;<br> if (x != 0 && y != 0)<br> machine[x][y] = 1;<br>                                                            }
-                                                            <br> cout
-                                                            << xyl(machine, n, m) << endl;<br>
-                                                                }<br> return 0;<br> }
-                                                                <br>
-            </code>
-
-        </p>
+        </pre> //
+        <script src="../light/prism.js"></script>
     </div>
-    <p id="0">dsf</p>
 
+    <pre id="2">
+        <code class="language-css">
+
+        </code>
+    </pre>
+
+    <pre id="3">
+        <code class="language-css">
+
+        </code>
+    </pre>
+
+    <pre id="4">
+        <code class="language-css">
+
+        </code>
+    </pre>
+
+    <pre id="5">
+        <code class="language-css">
+
+        </code>
+    </pre>
 
 
 
