@@ -209,7 +209,7 @@
     <video autoplay loop muted>
         <source src="E:\焰灵姬.mp4" type="video/mp4" />
     </video>
-    <ul>
+   <ul style="top: 60;">
         <li>
             <a class="active" href="#0">回到顶部</a>
         </li>
@@ -219,15 +219,17 @@
         <li><a href="#4 ">实验四</a></li>
         <li><a href="#5 ">实验五</a></li>
     </ul>
-
-    <div style="text-align: center;padding-top: 38%">
-        <a href="https://blog.csdn.net/m0_52796585?spm=1000.2115.3001.5343 " class="link_c_l_blue">CSDN博客链接</a>
+    <div class="charset_title" style="margin-top: 20%;" id="0"> 无名之逆的博客
+    </div>
+    <div style="text-align: center;padding-top: 12%">
+        <a href="https://blog.csdn.net/m0_52796585?spm=1000.2115.3001.5343 " class="link_c_l_blue">C S D N博客链接</a>
     </div>
     <br>
-    <a href="#2">
+    <a href="#1">
         <button class="button ">开始</button>
     </a>
-    <div style="margin-left:25%;padding:1px 16px;height:auto;width: auto;" id="1">
+    
+    <div style="margin-left:25%;padding:1px 16px;height:auto;width: auto;">
         <!-- 还要注意，我们已为 sidenav 设置 overflow：auto。如果 sidenav 太长时（例如，如果其中有超过 50 个链接），会添加滚动条。 -->
         <!-- 请注意，此 div 元素的左外边距为 25％。这是因为侧导航栏被设置为 25％ 宽。如果删除这个外边距，则 sidenav 将叠加到该 div 上。 -->
         <!-- 全高的固定侧导航栏 -->
@@ -385,7 +387,37 @@
         return 0;
     }
 </code>
-<code class="language-cpp" id="2">
+</div>
+<div style="margin-left:25%;padding:1px 16px;height:auto;width: auto;">
+    <!-- 还要注意，我们已为 sidenav 设置 overflow：auto。如果 sidenav 太长时（例如，如果其中有超过 50 个链接），会添加滚动条。 -->
+    <!-- 请注意，此 div 元素的左外边距为 25％。这是因为侧导航栏被设置为 25％ 宽。如果删除这个外边距，则 sidenav 将叠加到该 div 上。 -->
+    <!-- 全高的固定侧导航栏 -->
+    <!-- 请尝试滚动此区域，并查看 sidenav 如何粘在页面上。 -->
+
+    <h1 style="color: cyan; " id="2">实验2  表达式求值</h1>
+    <pre style="color: rgb(13, 190, 108);font-size: 1.2rem;">
+    二、实验学时：
+        6学时
+    三、实验目的
+        1.理解栈的结构特点和基本操作特性；
+        2.掌握利用栈实现表达式求值算法。 
+    四、实验内容(步骤)
+        输入一个算术表达式(以“=”结束)，求其值。要求表达式以“=”结束，操作数为多位实数，对错误表达式要进行检测。
+        1.设置两个栈：optr算符栈和opnd操作数栈。初始置opnd为空栈；起始符“=”为optr的栈底元素；
+        2.自左向右扫描表达式中的每个字符c：
+        1)若c为操作数，则进opnd栈；
+        2)若c为算符，则让optr栈的栈顶元素与c比较优先级：
+        a.若栈顶算符优先级低于刚读入的运算符c，则让刚读入的运算符c进optr栈。
+        b.若栈顶算符优先级高于刚读入的运算符c，则将栈顶算符退栈，送入；同时将操作数栈opnd退栈两次，得到两个操作数b、a，对a、b进行ab运算后，将运算结果作为中间结果推入opnd栈。
+        c.若栈顶运算符的优先级与刚读入的运算符c相同，说明左右括号相遇，只需将栈顶运算符（左括号）退栈即可。
+        3.直到扫描到c为定界符，即optr栈的栈顶元素和当前读入的字符均为“=”，则整个表达式求值完毕。
+    </pre>
+    <pre style="color: aqua;">
+
+
+    </pre>
+    <pre>
+<code class="language-cpp">
     #include&lt;iostream>
     #include&lt;string>
     #include&lt;stdlib.h>
@@ -576,13 +608,9 @@
     }
     
 </code>
+</pre>
         <script src="../light/prism.js"></script>
 </div>
- </pre>
-
-   
-
-
 
 </body>
 
