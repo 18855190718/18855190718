@@ -246,8 +246,8 @@
         4.输出相加后的一元多项式。
         </pre>
         <pre>
-<code class="language-css">
-    #include<iostream>
+<code class="language-cpp" id="1">
+    #include&lt;iostream&gt;
     using namespace std;
     struct list{
         double val;
@@ -301,7 +301,7 @@
                     p2_n=p2_n->next;
                 }
             }
-            else if(p1_n->index<p2_n->index){
+            else if(p1_n->index&lt;p2_n->index){
                 if(p1_n->val!=0){
                     p3=(struct list*)malloc(sizeof(list));
                     p3->next=nullptr;
@@ -380,13 +380,202 @@
             head1=sum(head1,head2);
             cout<<"输出合并后的表达式：";
             print(head1);
-            cout<<endl;
+            cout&lt;&lt;endl;
         }
         return 0;
     }
 </code>
-
-        </pre> //
+<code class="language-cpp" id="2">
+    #include&lt;iostream>
+    #include&lt;string>
+    #include&lt;stdlib.h>
+    #include&lt;algorithm>
+    #include&lt;math.h>
+    using namespace std;
+    template &lt;class vector> class stack{
+        public:
+            int top;
+            vector a[100];//数组模拟栈
+            stack(){
+                top=0;
+            }
+            //栈空判断
+            bool Empty(){
+                return top==0?true:false;
+            }
+            //栈的上限判断
+            bool MaxSize(){
+                return top>=99?true:false;
+            }
+            //入栈
+            template &lt;typename t> void Push_Back(t tem){
+                if(MaxSize()) return;
+                ++top;
+                a[top]=tem;
+            }
+            //出栈
+            vector Pop_back(){
+                if(Empty()) return 0;
+                vector tem=a[top];
+                --top;
+                return tem;
+            }
+            //获取顶部元素
+            vector TopNum(){
+                return a[top];
+            }
+            //清空数组
+            void clear(){
+                top=0;
+            }
+    };
+    //转double型数字
+    double word(int &i,string s){
+        double tem(0);
+        double res(0);
+        long long int sign(1);
+        int SumNum(-1);
+        int point(0);
+        for(int j=i;(s[j]<='9'&&s[j]>='0'&&j&lt;s.size())||s[j]=='.';++j){
+            ++SumNum;
+            if(s[j]=='.'){
+                point=j-i;
+                --SumNum;
+            }
+        }
+        sign=pow(10,SumNum)+0.000001;
+        while(sign){
+            if(s[i]=='.'){
+                ++i;
+                continue;
+            }
+            tem+=(s[i]-'0')*sign;
+            ++i;
+            sign/=10;
+        }
+        --i;
+        if(point!=0) res=tem/(pow(10,SumNum-point+1)+0.000001);
+        else res=tem;
+        return res;
+    }
+    //入栈符号判断
+    bool JudgeChar(char tem){
+        if(tem=='+'||tem=='-'||tem=='*'||tem=='/'||tem=='('||tem==')') return true;
+        else return false;
+    }
+    //优先级判断
+    char FirSec(char c1, char c2){
+        if(c2=='=') return '>';
+    
+        if(c1=='+'){
+            if(c2=='+') return '=';
+            else if(c2=='-') return '=';
+            else if(c2=='*') return '<';
+            else if(c2=='/') return '<';
+            else if(c2=='(') return '>';
+        }
+        else if(c1=='-'){
+            if(c2=='+') return '=';
+            else if(c2=='-') return '=';
+            else if(c2=='*') return '<';
+            else if(c2=='/') return '<';
+            else if(c2=='(') return '>';
+        }
+        else if(c1=='*'){
+            if(c2=='+') return '>';
+            else if(c2=='-') return '>';
+            else if(c2=='*') return '=';
+            else if(c2=='/') return '=';
+            else if(c2=='(') return '>';
+        }
+        else if(c1=='/'){
+            if(c2=='+') return '>';
+            else if(c2=='-') return '>';
+            else if(c2=='*') return '=';
+            else if(c2=='/') return '=';
+            else if(c2=='(') return '>';
+        }
+        else if(c1=='('){
+            if(c2=='+') return '>';
+            else if(c2=='-') return '>';
+            else if(c2=='*') return '>';
+            else if(c2=='/') return '>';
+            else if(c2=='(') return '>';
+        }
+        return '=';
+    }
+    //计算部分
+    double Calculation(string str,stack&lt;char> ShengQiangShi,stack&lt;double> math){
+        char c('0');
+        double n1(0),n2(0);
+        for(int i=0;i&lt;str.size();++i){
+            if(str[i]=='=') continue;
+            if(JudgeChar(str[i])){
+                if(str[i]==')'){
+                    c=ShengQiangShi.Pop_back();
+                    while(c != '('){
+                        n1=math.Pop_back();
+                        n2=math.Pop_back();
+                        switch(c){
+                            case '+': math.Push_Back(n2+n1);break;
+                            case '-': math.Push_Back(n2-n1);break;
+                            case '*': math.Push_Back(n2*n1);break;
+                            case '/': math.Push_Back(n2/n1);break;
+                        }   
+                        c=ShengQiangShi.Pop_back();//弹出运算符号
+                    }
+                }
+                else if(FirSec(str[i],ShengQiangShi.TopNum())=='>'){
+                    ShengQiangShi.Push_Back(str[i]);
+                }
+                else{
+                    while(FirSec(str[i],ShengQiangShi.TopNum())!='>'||str[i]=='='){
+                        c=ShengQiangShi.Pop_back();
+                        n1=math.Pop_back();
+                        n2=math.Pop_back();
+                        switch(c){
+                            case '+': math.Push_Back(n2+n1);break;
+                            case '-': math.Push_Back(n2-n1);break;
+                            case '*': math.Push_Back(n2*n1);break;
+                            case '/': math.Push_Back(n2/n1);break;
+                            default:break;
+                        }
+                    }
+                    ShengQiangShi.Push_Back(str[i]);
+                }
+            }   
+            else{
+                math.Push_Back(word(i,str));
+            }
+        }
+        c=ShengQiangShi.Pop_back();
+        while(c!='='){
+            switch(c){
+                case '+':n1=math.Pop_back();n2=math.Pop_back();math.Push_Back(n2+n1);break;
+                case '-':n1=math.Pop_back();n2=math.Pop_back();math.Push_Back(n2-n1);break;
+                case '*':n1=math.Pop_back();n2=math.Pop_back();math.Push_Back(n2*n1);break;
+                case '/':n1=math.Pop_back();n2=math.Pop_back();math.Push_Back(n2/n1);break;
+                default:break;
+            }
+            c=ShengQiangShi.Pop_back();
+        }
+        return math.TopNum();
+    } 
+    int main(){
+        stack&lt;double> ShengQiangShi;
+        stack&lt;double> math;
+        string str;
+        while(1){
+            ShengQiangShi.Push_Back('=');
+            cin>>str;
+            cout&lt;&lt;Calculation(str,ShengQiangShi,math)&lt;&lt;endl;
+            ShengQiangShi.clear();
+            math.clear();
+        }
+        return 0;
+    }
+    
+</code>
         <script src="../light/prism.js"></script>
     </div>
 
